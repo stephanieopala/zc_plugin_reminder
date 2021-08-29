@@ -1,5 +1,9 @@
-const express = require('express')
+const express = require('express');
+const port = process.env.PORT || 5000;
+const app = express();
 
-const app = express()
+app.get('/user', (req, res) => { 
+  res.send({ express: 'Connected to Backend Successfully' }); 
+})
 
-app.listen(4000, () => console.log('Listening on 4000'))
+app.listen(port, () => console.log(`Listening on port ${port}`));
