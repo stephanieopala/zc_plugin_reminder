@@ -2,7 +2,7 @@ import React from 'react'
 import Sortbar from './sortbar'
 import Searchbar from './searchbar'
 import SetDeadlineButton from './button'
-
+import SummaryButton from '../../components/deadlineSummary/SummaryButton'
 const Nav = () => {
 	return (
 		<nav className="space-y-1 md:space-y-0">
@@ -18,6 +18,9 @@ const Nav = () => {
 				</div>
 				<div className="">
 					<SetDeadlineButton />
+				</div>
+				<div>
+					<SummaryButton />
 				</div>
 			</div>
 			<div className="md:hidden flex flex-col space-y-2 sm:space-y-0 sm:flex-row">

@@ -8,7 +8,7 @@ import { ModalContext } from './context/ModalContext.jsx'
 
 import ViewDeadline from './components/viewDeadline'
 import NewDeadline from './components/newDeadline'
-
+import SummaryModal from './components/deadlineSummary/SummaryModal'
 const App = () => {
 	const { modalData } = useContext(ModalContext)
 
@@ -19,6 +19,9 @@ const App = () => {
 			) : null}
 			{modalData.modalShow && modalData.modalType === 'newDeadline' ? (
 				<NewDeadline modalData={modalData} />
+			) : null}
+			{modalData.modalShow && modalData.modalType === 'SummaryModal' ? (
+				<SummaryModal modalData={modalData} />
 			) : null}
 			<Layout />
 		</>
